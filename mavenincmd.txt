@@ -1,0 +1,265 @@
+Microsoft Windows [Version 10.0.18363.720]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\Harsha>mvn archetype:generate -DgroupId=ToolsQA -DartifactId=DemoMavenProject2 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[INFO] >>> maven-archetype-plugin:3.1.2:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO]
+[INFO] <<< maven-archetype-plugin:3.1.2:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO]
+[INFO]
+[INFO] --- maven-archetype-plugin:3.1.2:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Batch mode
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: basedir, Value: C:\Users\Harsha
+[INFO] Parameter: package, Value: ToolsQA
+[INFO] Parameter: groupId, Value: ToolsQA
+[INFO] Parameter: artifactId, Value: DemoMavenProject2
+[INFO] Parameter: packageName, Value: ToolsQA
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: C:\Users\Harsha\DemoMavenProject2
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.281 s
+[INFO] Finished at: 2020-03-24T14:00:37+05:30
+[INFO] ------------------------------------------------------------------------
+
+C:\Users\Harsha>
+C:\Users\Harsha>
+C:\Users\Harsha>d:
+
+D:\>cd maven
+
+D:\maven>mvn archetype:generate -DgroupId=ToolsQA -DartifactId=DemoMavenProject2 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[INFO] >>> maven-archetype-plugin:3.1.2:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO]
+[INFO] <<< maven-archetype-plugin:3.1.2:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO]
+[INFO]
+[INFO] --- maven-archetype-plugin:3.1.2:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Batch mode
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: basedir, Value: D:\maven
+[INFO] Parameter: package, Value: ToolsQA
+[INFO] Parameter: groupId, Value: ToolsQA
+[INFO] Parameter: artifactId, Value: DemoMavenProject2
+[INFO] Parameter: packageName, Value: ToolsQA
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: D:\maven\DemoMavenProject2
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.730 s
+[INFO] Finished at: 2020-03-24T14:03:51+05:30
+[INFO] ------------------------------------------------------------------------
+
+D:\maven>mvn validate
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.182 s
+[INFO] Finished at: 2020-03-24T14:05:07+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] The goal you specified requires a project to execute but there is no POM in this directory (D:\maven). Please verify you invoked Maven from the correct directory. -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException
+
+D:\maven>cd DemoMavenProject2
+
+D:\maven\DemoMavenProject2>mvn validate
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------------------< ToolsQA:DemoMavenProject2 >----------------------
+[INFO] Building DemoMavenProject2 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.364 s
+[INFO] Finished at: 2020-03-24T14:05:19+05:30
+[INFO] ------------------------------------------------------------------------
+
+D:\maven\DemoMavenProject2>mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------------------< ToolsQA:DemoMavenProject2 >----------------------
+[INFO] Building DemoMavenProject2 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ DemoMavenProject2 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\maven\DemoMavenProject2\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ DemoMavenProject2 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to D:\maven\DemoMavenProject2\target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] Source option 5 is no longer supported. Use 7 or later.
+[ERROR] Target option 5 is no longer supported. Use 7 or later.
+[INFO] 2 errors
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.695 s
+[INFO] Finished at: 2020-03-24T14:05:35+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project DemoMavenProject2: Compilation failure: Compilation failure:
+[ERROR] Source option 5 is no longer supported. Use 7 or later.
+[ERROR] Target option 5 is no longer supported. Use 7 or later.
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+D:\maven\DemoMavenProject2>mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------------------< ToolsQA:DemoMavenProject2 >----------------------
+[INFO] Building DemoMavenProject2 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ DemoMavenProject2 >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ DemoMavenProject2 <<<
+[INFO]
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ DemoMavenProject2 ---
+[INFO] Using Eclipse Workspace: D:\
+[WARNING] Workspace defines a VM that does not contain a valid jre/lib/rt.jar: C:\Program Files\Java\jdk-13.0.2
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] Wrote Eclipse project for "DemoMavenProject2" to D:\maven\DemoMavenProject2.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.346 s
+[INFO] Finished at: 2020-03-24T14:09:42+05:30
+[INFO] ------------------------------------------------------------------------
+
+D:\maven\DemoMavenProject2>mvn eclipse:eclipse
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/2.3.2/maven-compiler-plugin-2.3.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/2.3.2/maven-compiler-plugin-2.3.2.pom (7.3 kB at 4.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/18/maven-plugins-18.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/18/maven-plugins-18.pom (13 kB at 36 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/16/maven-parent-16.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/16/maven-parent-16.pom (23 kB at 69 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/2.3.2/maven-compiler-plugin-2.3.2.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/2.3.2/maven-compiler-plugin-2.3.2.jar (29 kB at 36 kB/s)
+[INFO]
+[INFO] ---------------------< ToolsQA:DemoMavenProject2 >----------------------
+[INFO] Building DemoMavenProject2 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ DemoMavenProject2 >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ DemoMavenProject2 <<<
+[INFO]
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ DemoMavenProject2 ---
+[INFO] Using Eclipse Workspace: D:\
+[WARNING] Workspace defines a VM that does not contain a valid jre/lib/rt.jar: C:\Program Files\Java\jdk-13.0.2
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6
+[INFO] Wrote settings to D:\maven\DemoMavenProject2\.settings\org.eclipse.jdt.core.prefs
+[INFO] File D:\maven\DemoMavenProject2\.project already exists.
+       Additional settings will be preserved, run mvn eclipse:clean if you want old settings to be removed.
+[INFO] Wrote Eclipse project for "DemoMavenProject2" to D:\maven\DemoMavenProject2.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.031 s
+[INFO] Finished at: 2020-03-24T14:14:54+05:30
+[INFO] ------------------------------------------------------------------------
+
+D:\maven\DemoMavenProject2>mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------------------< ToolsQA:DemoMavenProject2 >----------------------
+[INFO] Building DemoMavenProject2 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ DemoMavenProject2 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\maven\DemoMavenProject2\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ DemoMavenProject2 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.024 s
+[INFO] Finished at: 2020-03-24T14:17:46+05:30
+[INFO] ------------------------------------------------------------------------
+
+D:\maven\DemoMavenProject2>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------------------< ToolsQA:DemoMavenProject2 >----------------------
+[INFO] Building DemoMavenProject2 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ DemoMavenProject2 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\maven\DemoMavenProject2\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ DemoMavenProject2 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ DemoMavenProject2 ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\maven\DemoMavenProject2\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ DemoMavenProject2 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ DemoMavenProject2 ---
+[INFO] Surefire report directory: D:\maven\DemoMavenProject2\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running ToolsQA.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.834 s
+[INFO] Finished at: 2020-03-24T14:18:10+05:30
+[INFO] ------------------------------------------------------------------------
+
+D:\maven\DemoMavenProject2>
